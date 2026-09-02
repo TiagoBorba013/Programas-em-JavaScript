@@ -1,0 +1,7 @@
+const prompt = require("prompt-sync")()
+const salario = Number(prompt("Salário: "))
+const tempo = Number(prompt("Tempo de serviço: "))
+const quad = Math.floor(tempo/4)
+const Sf = salario + (salario*0.01*quad)
+console.log(`Quadriênios: ${quad}`)
+console.log(`Salário final: ${Sf.toFixed(2)}`)
