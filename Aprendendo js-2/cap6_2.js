@@ -3,8 +3,8 @@ const respErros = document.querySelector("#outErros")
 const respChances = document.querySelector("#outChances")
 const respDica = document.querySelector("#outDica")
 
-let erros = []
-let sorteado = Math.floor(Math.random()*100 +1)
+const erros = []
+const sorteado = Math.floor(Math.random()*100 +1)
 const CHANCES = 6
 
 form.addEventListener("submit", (e) =>{
@@ -42,14 +42,6 @@ form.addEventListener("submit", (e) =>{
 
 })
 
-form.btnNovo.addEventListener("click", () => {
-    erros = []
-    sorteado = Math.floor(Math.random()*100 +1)
-    respErros.innerText = ""
-    respChances.innerText = CHANCES
-    respDica.innerText = ""
-    form.btnSubmit.disabled = false
-    form.btnNovo.className = ""
-    form.inNumero.value = ""
-    form.inNumero.focus()
+form.btnNovo.addEventListener("click", () =>{
+    location.reload()
 })
